@@ -25,7 +25,9 @@ module.exports = {
       return;
     }
 
+    await interaction.deferReply();
+
     const answer = await ask(prompt);
-    await interaction.reply(answer);
+    await interaction.editReply(answer);
   },
 };
